@@ -1,0 +1,84 @@
+<h1 mat-dialog-title>{{data ? 'Edit user ' + data.name : 'Create new user'}}</h1>
+<div mat-dialog-content>
+  <form id="form" [formGroup]="form" autocomplete="off">
+    <div>
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input
+          formControlName="name"
+          matInput
+          placeholder="Name"
+        />
+        <mat-error *ngIf="formControls.name.hasError('required')">
+          Name is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div >
+      <mat-form-field>
+        <mat-label>Username</mat-label>
+        <input
+          formControlName="username"
+          matInput
+          placeholder="username"
+        />
+        <mat-error *ngIf="formControls.username.hasError('required')">
+          Username is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div >
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input
+          formControlName="email"
+          matInput
+          placeholder="Email"
+        />
+        <mat-error *ngIf="formControls.email.hasError('required')">
+          Email is <strong>required</strong>
+        </mat-error>
+        <mat-error *ngIf="formControls.email.hasError('email')">
+          Email is <strong>invalid</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div >
+      <mat-form-field>
+        <mat-label>Street</mat-label>
+        <input
+          formControlName="street"
+          matInput
+          placeholder="Street"
+        />
+        <mat-error *ngIf="formControls.street.hasError('required')">
+          Street is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div >
+      <mat-form-field>
+        <mat-label>City</mat-label>
+        <input
+          formControlName="city"
+          matInput
+          placeholder="City"
+        />
+        <mat-error *ngIf="formControls.city.hasError('required')">
+          City is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div mat-dialog-actions>
+      <button mat-button (click)="onNoClick()">Cancel</button>
+      <button type="submit" mat-button (click)="submit()" cdkFocusInitial>{{data ? 'Edit' : 'Create'}}</button>
+    </div>
+  </form>
+
+</div>
+
