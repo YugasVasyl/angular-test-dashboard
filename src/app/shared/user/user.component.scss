@@ -9,6 +9,13 @@
     right: 5px;
     button {
       cursor: pointer;
+      width: 30px;
+      min-width: 0;
+      padding: 0;
+      height: 30px;
     }
+  }
+  .name {
+    padding-right: 60px;
   }
 }

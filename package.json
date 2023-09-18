@@ -5,12 +5,15 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build-to-github": "ng build --base-href \"https://YugasVasyl.github.io/angular-test-dashboard/\"",
+    "deploy-to-github": "npx angular-cli-ghpages --dir=dist/angular-test-dashboard",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "^16.0.0",
+    "@angular/cdk": "^16.2.4",
     "@angular/common": "^16.0.0",
     "@angular/compiler": "^16.0.0",
     "@angular/core": "^16.0.0",
